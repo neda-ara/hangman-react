@@ -1,3 +1,3 @@
 export const HangmanStickFigure = () => {
-  return <div></div>;
+  return <div className="relative"></div>;
 };
