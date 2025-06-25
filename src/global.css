@@ -1,0 +1,80 @@
+.hangman-game-container {
+  background: url("https://img.freepik.com/premium-photo/prison-cell-with-light-shining-through-barred-window-3d-rendering_256301-2578.jpg")
+    no-repeat center center;
+  background-size: cover;
+}
+
+.hangman-tagline {
+  font-family: "Creepster", cursive;
+}
+
+/* Pole and Bar Styles */
+.hangman-rope,
+.hangman-upright {
+  background: linear-gradient(
+    180deg,
+    #2a2a2a,
+    #6e6e6e 10%,
+    #b8b8b8 30%,
+    #e0e0e0 50%,
+    #b8b8b8 70%,
+    #6e6e6e 90%,
+    #2a2a2a
+  );
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.2), 2px 0 8px rgba(0, 0, 0, 0.8),
+    inset 1px 0 1px rgba(255, 255, 255, 0.3),
+    inset -1px 0 2px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hangman-topbar,
+.hangman-base {
+  background: linear-gradient(
+    90deg,
+    #2a2a2a,
+    #6e6e6e 10%,
+    #b8b8b8 30%,
+    #e0e0e0 50%,
+    #b8b8b8 70%,
+    #6e6e6e 90%,
+    #2a2a2a
+  );
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.2), 0 2px 8px rgba(0, 0, 0, 0.8),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Body parts */
+.hangman-head {
+  background: radial-gradient(circle at 30% 30%, #ffffff, #c0c0c0, #808080);
+  box-shadow: inset -4px -4px 10px rgba(0, 0, 0, 0.2),
+    2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hangman-body {
+  background: radial-gradient(circle at 40% 30%, #e0e0e0, #999999, #555555);
+  box-shadow: inset -4px -4px 10px rgba(0, 0, 0, 0.3),
+    inset 2px 2px 6px rgba(255, 255, 255, 0.2), 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hangman-arm-left,
+.hangman-arm-right {
+  background: linear-gradient(to bottom right, #d0d0d0, #888);
+  box-shadow: inset -2px -2px 6px rgba(0, 0, 0, 0.3),
+    2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hangman-arm-left {
+  transform: rotate(22deg);
+}
+
+.hangman-arm-right {
+  transform: rotate(-22deg);
+}
+
+.hangman-leg-left,
+.hangman-leg-right {
+  background: linear-gradient(to right, #d8d8d8 5%, #a0a0a0 40%, #444 90%);
+  clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);
+}
