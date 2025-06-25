@@ -281,7 +281,7 @@ export const GameWords = {
       {
         word: "Yuzu",
         hint: "Citrus fruit or legendary electric squirrel?",
-        difficulty: "easy",
+        difficulty: "medium",
       },
       {
         word: "Boba",
@@ -312,7 +312,7 @@ export const GameWords = {
       {
         word: "Taxes",
         hint: "Annual punishment for not reading the fine print.",
-        difficulty: "medium",
+        difficulty: "easy",
       },
       {
         word: "Mortgage",
@@ -352,7 +352,7 @@ export const GameWords = {
       {
         word: "Excel",
         hint: "A spreadsheet demon summoned by Ctrl+Z.",
-        difficulty: "medium",
+        difficulty: "easy",
       },
     ],
   },
@@ -363,7 +363,7 @@ export const GameWords = {
       {
         word: "Clown",
         hint: "Fear provider at birthday rates.",
-        difficulty: "medium",
+        difficulty: "easy",
       },
       {
         word: "EthicalHacker",
@@ -414,7 +414,7 @@ export const GameWords = {
       {
         word: "Voldemort",
         hint: "He who must not moisturize.",
-        difficulty: "hard",
+        difficulty: "easy",
       },
       {
         word: "Joker",
@@ -429,7 +429,7 @@ export const GameWords = {
       {
         word: "Thanos",
         hint: "Snaps once, ruins everyone\u2019s weekend.",
-        difficulty: "medium",
+        difficulty: "easy",
       },
       {
         word: "Loki",
