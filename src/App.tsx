@@ -1,4 +1,4 @@
-import { HangmanGame } from "./components/hangman-game";
+import { HangmanGame } from "./components/game-board";
 
 function App() {
   return <HangmanGame />;

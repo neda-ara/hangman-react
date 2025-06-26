@@ -1,3 +1,44 @@
+:root {
+  /* Background & Theme */
+  --bg-dark: #1a1c21;
+  --bg-inner: #0d0e11;
+  --border: #1e1f22;
+  --glow: #a855f7;
+  --focus: #8a496b;
+
+  /* Disabled state */
+  --disabled-text: #555;
+  --disabled-bg: #1e1e1e;
+
+  /* Grayscale */
+  --white: #ffffff;
+  --gray: #d1d1d1;
+  --black: #000000;
+
+  /* Metal gradients */
+  --metal-dark: #2a2a2a;
+  --metal-mid-dark: #6e6e6e;
+  --metal-mid: #b8b8b8;
+  --metal-light: #e0e0e0;
+
+  /* Body parts */
+  --head-mid: #c0c0c0;
+  --head-shadow: #808080;
+  --body-mid: #999999;
+  --body-dark: #555555;
+  --arm-light: #d0d0d0;
+  --arm-dark: #888;
+  --leg-light: #d8d8d8;
+  --leg-mid: #a0a0a0;
+  --leg-shadow: #444;
+
+  /* Shadows */
+  --shadow-light: rgba(255, 255, 255, 0.3);
+  --shadow-dark: rgba(0, 0, 0, 0.6);
+  --shadow-white-soft: rgba(255, 255, 255, 0.2);
+  --shadow-black-strong: rgba(0, 0, 0, 0.8);
+}
+
 .hangman-game-container {
   background: url("https://img.freepik.com/premium-photo/prison-cell-with-light-shining-through-barred-window-3d-rendering_256301-2578.jpg")
     no-repeat center center;
@@ -8,59 +49,73 @@
   font-family: "Creepster", cursive;
 }
 
-/* Pole and Bar Styles */
+/* Structure: Pole and Bars */
 .hangman-rope,
 .hangman-upright {
   background: linear-gradient(
     180deg,
-    #2a2a2a,
-    #6e6e6e 10%,
-    #b8b8b8 30%,
-    #e0e0e0 50%,
-    #b8b8b8 70%,
-    #6e6e6e 90%,
-    #2a2a2a
+    var(--metal-dark),
+    var(--metal-mid-dark) 10%,
+    var(--metal-mid) 30%,
+    var(--metal-light) 50%,
+    var(--metal-mid) 70%,
+    var(--metal-mid-dark) 90%,
+    var(--metal-dark)
   );
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.2), 2px 0 8px rgba(0, 0, 0, 0.8),
-    inset 1px 0 1px rgba(255, 255, 255, 0.3),
-    inset -1px 0 2px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 4px var(--shadow-white-soft),
+    2px 0 8px var(--shadow-black-strong), inset 1px 0 1px var(--shadow-light),
+    inset -1px 0 2px var(--shadow-dark);
+  border: 1px solid var(--shadow-white-soft);
 }
 
 .hangman-topbar,
 .hangman-base {
   background: linear-gradient(
     90deg,
-    #2a2a2a,
-    #6e6e6e 10%,
-    #b8b8b8 30%,
-    #e0e0e0 50%,
-    #b8b8b8 70%,
-    #6e6e6e 90%,
-    #2a2a2a
+    var(--metal-dark),
+    var(--metal-mid-dark) 10%,
+    var(--metal-mid) 30%,
+    var(--metal-light) 50%,
+    var(--metal-mid) 70%,
+    var(--metal-mid-dark) 90%,
+    var(--metal-dark)
   );
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.2), 0 2px 8px rgba(0, 0, 0, 0.8),
-    inset 0 1px 1px rgba(255, 255, 255, 0.3),
-    inset 0 -1px 2px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 4px var(--shadow-white-soft),
+    0 2px 8px var(--shadow-black-strong), inset 0 1px 1px var(--shadow-light),
+    inset 0 -1px 2px var(--shadow-dark);
+  border: 1px solid var(--shadow-white-soft);
 }
 
-/* Body parts */
+/* Body Parts */
 .hangman-head {
-  background: radial-gradient(circle at 30% 30%, #ffffff, #c0c0c0, #808080);
+  background: radial-gradient(
+    circle at 30% 30%,
+    var(--white),
+    var(--head-mid),
+    var(--head-shadow)
+  );
   box-shadow: inset -4px -4px 10px rgba(0, 0, 0, 0.2),
     2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hangman-body {
-  background: radial-gradient(circle at 40% 30%, #e0e0e0, #999999, #555555);
+  background: radial-gradient(
+    circle at 40% 30%,
+    var(--metal-light),
+    var(--body-mid),
+    var(--body-dark)
+  );
   box-shadow: inset -4px -4px 10px rgba(0, 0, 0, 0.3),
     inset 2px 2px 6px rgba(255, 255, 255, 0.2), 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .hangman-arm-left,
 .hangman-arm-right {
-  background: linear-gradient(to bottom right, #d0d0d0, #888);
+  background: linear-gradient(
+    to bottom right,
+    var(--arm-light),
+    var(--arm-dark)
+  );
   box-shadow: inset -2px -2px 6px rgba(0, 0, 0, 0.3),
     2px 2px 6px rgba(0, 0, 0, 0.5);
 }
@@ -75,6 +130,55 @@
 
 .hangman-leg-left,
 .hangman-leg-right {
-  background: linear-gradient(to right, #d8d8d8 5%, #a0a0a0 40%, #444 90%);
+  background: linear-gradient(
+    to right,
+    var(--leg-light) 5%,
+    var(--leg-mid) 40%,
+    var(--leg-shadow) 90%
+  );
   clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);
+}
+
+/* Keyboard */
+.keyboard-button {
+  height: 3.25rem;
+  aspect-ratio: 1;
+  border-radius: 9999px;
+  background: linear-gradient(145deg, var(--bg-dark), var(--bg-inner));
+  color: var(--gray);
+  text-transform: uppercase;
+  border: 2px solid var(--border);
+  box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.7);
+  transition: transform 0.15s ease-in-out, filter 0.15s ease-in-out;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  text-shadow: 0 0 2px var(--glow), 0 0 6px rgba(168, 85, 247, 0.4);
+}
+
+.keyboard-button:hover {
+  filter: brightness(1.2);
+}
+
+.keyboard-button:active {
+  transform: translateY(2px);
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.9),
+    0 2px 4px rgba(10, 10, 15, 0.8);
+}
+
+.keyboard-button:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.keyboard-btn-disabled {
+  background-color: var(--disabled-bg);
+  color: var(--disabled-text);
+  cursor: not-allowed;
+  opacity: 0.7;
+  pointer-events: none;
+  box-shadow: inset 1px 1px 2px #111, inset -1px -1px 2px var(--metal-dark),
+    0 2px 4px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 1px #222, 0 0 2px #2e2e2e;
+  transform: translateY(1px);
 }

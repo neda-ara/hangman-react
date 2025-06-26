@@ -2,6 +2,7 @@ import { GameWords } from "../utils/word-bank";
 import { HangmanFigure } from "./hangman-figure";
 import { useEffect, useState } from "react";
 import { useRandomWord } from "../hooks/useRandomWord";
+import { WordArea } from "./word-area";
 import type { WordWithCategory } from "../utils/types";
 
 export const HangmanGame = () => {
@@ -30,9 +31,13 @@ export const HangmanGame = () => {
         <img alt="logo" className="h-14" src="src/assets/hangman-logo.svg" />
       </nav>
 
-      <main className="flex-grow box-border w-full h-full px-10">
-        <HangmanFigure />
-        <h1 className="text-white text-xl">{currentWord?.word}</h1>
+      <main className="flex flex-grow box-border w-full h-full px-10">
+        <div className="flex items-center justify-center w-1/2">
+          <HangmanFigure />
+        </div>
+        <div className="w-1/2 h-full">
+          <WordArea currentWord={currentWord} />
+        </div>
       </main>
 
       <footer className="flex justify-end w-full">
