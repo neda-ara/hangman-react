@@ -16,4 +16,11 @@ export interface WordBank {
 
 export interface WordWithCategory extends Word {
   category: string;
+  categoryIcon: string;
+  categoryName: string;
+}
+
+export interface UsedKey {
+  key: string;
+  isCorrectGuess: boolean;
 }

@@ -1,7 +1,7 @@
 export const GameWords = {
   animals: {
     label: "Animals",
-    icon: "",
+    icon: "🐘",
     words: [
       {
         word: "Ant",
@@ -25,7 +25,7 @@ export const GameWords = {
       },
       {
         word: "Goat",
-        hint: "Cliffside daredevil and part-time screaming champion.",
+        hint: "Greatest of all time.",
         difficulty: "easy",
       },
       {
@@ -52,7 +52,7 @@ export const GameWords = {
   },
   colors: {
     label: "Colors",
-    icon: "",
+    icon: "🎨",
     words: [
       {
         word: "Crimson",
@@ -103,7 +103,7 @@ export const GameWords = {
   },
   countries: {
     label: "Countries",
-    icon: "",
+    icon: "🗺️",
     words: [
       {
         word: "Japan",
@@ -153,8 +153,8 @@ export const GameWords = {
     ],
   },
   fantasyCreatures: {
-    label: "Fantasycreatures",
-    icon: "",
+    label: "Fantasy Creatures",
+    icon: "🧜‍♂️",
     words: [
       {
         word: "Dragon",
@@ -205,7 +205,7 @@ export const GameWords = {
   },
   games: {
     label: "Games",
-    icon: "",
+    icon: "🎮",
     words: [
       {
         word: "Battleship",
@@ -256,7 +256,7 @@ export const GameWords = {
   },
   soundsLikePokemonButIsnt: {
     label: "Sounds Like A Pok\u00E9mon But Isn't",
-    icon: "",
+    icon: "🐦‍🔥",
     words: [
       {
         word: "Quinoa",
@@ -276,7 +276,7 @@ export const GameWords = {
       {
         word: "Alfalfa",
         hint: "Grass-type move. Boosts fiber, not damage.",
-        difficulty: "medium",
+        difficulty: "easy",
       },
       {
         word: "Yuzu",
@@ -306,8 +306,8 @@ export const GameWords = {
     ],
   },
   thingsYouThoughtYoudKnowByNow: {
-    label: "ThingsYouThoughtYouDknowbynow",
-    icon: "",
+    label: "Things You Thought You'd Know By Now",
+    icon: "🪙",
     words: [
       {
         word: "Taxes",
@@ -320,8 +320,8 @@ export const GameWords = {
         difficulty: "hard",
       },
       {
-        word: "Iron",
-        hint: "Some kind of hot flat thing? Used by mythical adults?",
+        word: "Audit",
+        hint: "The surprise party your accountant never wants to host.",
         difficulty: "easy",
       },
       {
@@ -357,8 +357,8 @@ export const GameWords = {
     ],
   },
   totallyRealJobs: {
-    label: "Totallyrealjobs",
-    icon: "",
+    label: "Totally Real Jobs",
+    icon: "🛠️",
     words: [
       {
         word: "Clown",
@@ -409,7 +409,7 @@ export const GameWords = {
   },
   villains: {
     label: "Villains",
-    icon: "",
+    icon: "🦹",
     words: [
       {
         word: "Voldemort",

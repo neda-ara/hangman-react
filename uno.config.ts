@@ -13,8 +13,16 @@ export default defineConfig({
     },
   ],
   theme: {
-    colors: {
-      primary: "#C890A7",
+    breakpoints: {
+      "1800": "1800px",
+      "1440": "1440px",
+      "1280": "1280px",
+      "1024": "1024px",
+      "900": "900px",
+      "768": "768px",
+      "600": "600px",
+      "480": "480px",
+      "375": "375px",
     },
   },
 });

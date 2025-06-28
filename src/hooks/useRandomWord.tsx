@@ -7,8 +7,14 @@ export function useRandomWord(wordBank: WordBank) {
 
   for (const categoryKey in wordBank) {
     const category = wordBank[categoryKey];
+
     category.words.forEach((wordObj) =>
-      allWords.push({ ...wordObj, category: categoryKey })
+      allWords.push({
+        ...wordObj,
+        category: categoryKey,
+        categoryIcon: category.icon,
+        categoryName: category.label,
+      })
     );
   }
 

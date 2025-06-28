@@ -1,9 +1,13 @@
-export const HangmanFigure = () => {
+interface HangmanFigureProps {
+  incorrectGuessCount: number;
+}
+
+export const HangmanFigure = ({ incorrectGuessCount }: HangmanFigureProps) => {
   const HANGMAN = [HEAD, BODY, LEFT_ARM, RIGHT_ARM, RIGHT_LEG, LEFT_LEG];
 
   return (
     <div className="relative flex justify-center w-full h-full max-h-300">
-      {HANGMAN.map((bodyParts) => bodyParts)}
+      {HANGMAN.slice(0, incorrectGuessCount).map((bodyParts) => bodyParts)}
 
       <div className="hangman-rope absolute h-20 top-0.9/10 left-[calc((100%-20rem)/2)+10rem] w-2.5 bg-gray-200 z-3" />
       <div className="hangman-topbar absolute top-0.9/10 left-[calc((100%-20rem)/2)] h-2.5 w-40 bg-gray-200 self-end z-2" />

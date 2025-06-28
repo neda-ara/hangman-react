@@ -20,3 +20,16 @@ export function pickDifficultyByAttempt(attempt: number): string {
 export function randomIndex(length: number): number {
   return Math.floor(Math.random() * length);
 }
+
+export const getDifficultyClass = (difficulty: string | undefined) => {
+  switch (difficulty?.toLowerCase()) {
+    case "easy":
+      return "difficulty-easy";
+    case "medium":
+      return "difficulty-medium";
+    case "hard":
+      return "difficulty-hard";
+    default:
+      return "";
+  }
+};
