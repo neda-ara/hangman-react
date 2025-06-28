@@ -118,6 +118,11 @@ export const WordArea = ({
     const handleKeyDown = (event: KeyboardEvent) => {
       const key = event.key.toUpperCase();
 
+      if (openModal && event.key === "Enter") {
+        handleGameOver();
+        return;
+      }
+
       if (/^[A-Z]$/.test(key)) {
         if (!disabledKeys.some((k) => k.key === key)) {
           handleKeyClick(key);
@@ -127,7 +132,7 @@ export const WordArea = ({
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [disabledKeys, currentWord]);
+  }, [disabledKeys, currentWord, openModal]);
 
   const getDisabledKeyClass = (letter: string) => {
     const keyObj = disabledKeys.find((k) => k.key === letter.toUpperCase());
