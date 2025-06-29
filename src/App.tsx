@@ -1,5 +1,7 @@
+import { HangmanGame } from "./components/game-board";
+
 function App() {
-  return <>HANGMAN</>;
+  return <HangmanGame />;
 }
 
 export default App;
