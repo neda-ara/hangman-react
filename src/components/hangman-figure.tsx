@@ -6,7 +6,7 @@ export const HangmanFigure = ({ incorrectGuessCount }: HangmanFigureProps) => {
   const HANGMAN = [HEAD, BODY, LEFT_ARM, RIGHT_ARM, RIGHT_LEG, LEFT_LEG];
 
   return (
-    <div className="relative flex justify-center w-full h-full max-h-300">
+    <div className="relative flex justify-center w-full h-full max-h-300 max-1024:scale-75 max-1024:-translate-y-20">
       {HANGMAN.slice(0, incorrectGuessCount).map((bodyParts) => bodyParts)}
 
       <div className="hangman-rope absolute h-20 top-0.9/10 left-[calc((100%-20rem)/2)+10rem] w-2.5 bg-gray-200 z-3" />

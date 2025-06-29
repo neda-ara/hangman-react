@@ -29,27 +29,35 @@ export const HangmanGame = () => {
   }, []);
 
   return (
-    <div className="hangman-game-container min-h-100vh max-h-100vh flex flex-col items-center justify-between w-full h-screen">
+    <div className="relative hangman-game-container min-h-100vh max-h-100vh flex flex-col items-center justify-between w-full h-screen">
       <nav className="w-full flex justify-between items-center">
-        <img alt="logo" className="h-14" src="src/assets/hangman-logo.svg" />
+        <img
+          alt="logo"
+          className="h-14 max-480:h-10"
+          src="src/assets/hangman-logo.svg"
+        />
         <div className="pr-4 flex items-center gap-4">
-          <div className="font-creepster text-white tracking-widest text-xl font-medium">
+          <div className="font-creepster text-white tracking-widest text-xl max-480:text-lg font-medium">
             Grave Call: {attempt}
           </div>
           <div className="flex items-center">
-            <img alt="score" className="h-12" src="src/assets/noose.svg" />
-            <p className="font-creepster text-white text-2xl m-0 font-medium">
+            <img
+              alt="score"
+              className="h-12 max-480:h-10"
+              src="src/assets/noose.svg"
+            />
+            <p className="font-creepster text-white text-2xl max-480:text-xl m-0 font-medium">
               {score}
             </p>
           </div>
         </div>
       </nav>
 
-      <main className="flex flex-grow box-border w-full h-full px-10">
-        <div className="flex items-center justify-center w-1/2">
+      <main className="flex flex-grow box-border w-full h-full px-10 max-1024:px-6 max-768:px-4 max-1024:flex-col max-480:px-2">
+        <div className="flex items-center justify-center w-1/2 max-1024:w-full max-1024:h-3/4">
           <HangmanFigure incorrectGuessCount={incorrectGuessCount} />
         </div>
-        <div className="w-1/2 h-full">
+        <div className="w-1/2 h-full max-1024:w-full max-1024:h-1/4 max-1024:-translate-y-10">
           <WordArea
             currentWord={currentWord}
             handleNextWord={handleNextWord}
@@ -63,7 +71,7 @@ export const HangmanGame = () => {
       </main>
 
       <footer className="flex justify-end w-full">
-        <p className="font-creepster uppercase text-lg tracking-widest text-white drop-shadow mb-2 px-4">
+        <p className="font-creepster uppercase text-lg max-480:text-sm tracking-widest text-white drop-shadow mb-2 px-4">
           One rope. One word.
         </p>
       </footer>

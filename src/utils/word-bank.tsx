@@ -141,7 +141,7 @@ export const GameWords = {
         difficulty: "medium",
       },
       {
-        word: "New Zealand",
+        word: "NewZealand",
         hint: "Hobbit holes, epic hikes, and sheep that outnumber people.",
         difficulty: "hard",
       },
@@ -437,7 +437,7 @@ export const GameWords = {
         difficulty: "easy",
       },
       {
-        word: "Darth Vader",
+        word: "DarthVader",
         hint: "Breathes like a fax machine, swings like a samurai.",
         difficulty: "hard",
       },
