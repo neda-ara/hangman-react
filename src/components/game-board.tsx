@@ -34,7 +34,7 @@ export const HangmanGame = () => {
         <img
           alt="logo"
           className="h-14 max-480:h-10"
-          src="src/assets/hangman-logo.svg"
+          src="assets/hangman-logo.svg"
         />
         <div className="pr-4 flex items-center gap-4">
           <div className="font-creepster text-white tracking-widest text-xl max-480:text-lg font-medium">
@@ -44,7 +44,7 @@ export const HangmanGame = () => {
             <img
               alt="score"
               className="h-12 max-480:h-10"
-              src="src/assets/noose.svg"
+              src="assets/noose.svg"
             />
             <p className="font-creepster text-white text-2xl max-480:text-xl m-0 font-medium">
               {score}
