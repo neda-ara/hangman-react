@@ -244,7 +244,7 @@ export const WordArea = ({
             <img
               alt="logo"
               className="h-14"
-              src={`src/assets/${isGameWon ? "party-hat" : "grave"}.svg`}
+              src={`assets/${isGameWon ? "party-hat" : "grave"}.svg`}
             />
           </div>
 
@@ -270,12 +270,12 @@ export const WordArea = ({
               <img
                 alt="logo"
                 className="h-36"
-                src={`src/assets/${isGameWon ? "gallows" : "hanged-man"}.svg`}
+                src={`assets/${isGameWon ? "gallows" : "hanged-man"}.svg`}
               />
               <img
                 alt="logo"
                 className="absolute h-14 bottom-1 right-0 scale-x--100"
-                src={`src/assets/${isGameWon ? "happy-man" : "reaper"}.svg`}
+                src={`assets/${isGameWon ? "happy-man" : "reaper"}.svg`}
               />
             </div>
             <div className="text-center mb-3">
